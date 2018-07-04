@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
 
-import { Header, MainContainer } from './components/styled-components';
+import { MainContainer } from './components/styled-components';
+
+import Header from './components/Header';
+import Top from './components/Top';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isToggleStart: true,
+      isToggleMenu: false,
     };
   }
 
-  reactStart = () => {
+  toggleMenu = () => {
     this.setState(prevState => ({
-      isToggleStart: !prevState.isToggleStart,
+      isToggleMenu: !prevState.isToggleMenu,
     }));
+    console.log("hgo")
   };
   render() {
     return (
       <div className="App">
-        <Header className="App-header">
-          <h1 className="App-title">React Starter</h1>
-        </Header>
+        <Header isToggleMenu={this.state.isToggleMenu} toggleMenu={this.toggleMenu} />
         <MainContainer>
-          <h2>{this.state.isToggleStart ? 'not start yet' : 'start!!!!!!'}</h2>
-          <button onClick={this.reactStart}>{this.state.isToggleStart ? 'start' : 'stop'}</button>
+          <Top />
         </MainContainer>
       </div>
     );
