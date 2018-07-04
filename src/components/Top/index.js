@@ -7,7 +7,6 @@ import { media } from '../../helpers/media-query';
 import { AnchorStyled, FlexWrapper } from '../styled-components';
 
 const TopContainer = styled.div`
-
   ${media.phone`
     padding: 2vh 16px;
   `};
@@ -41,7 +40,9 @@ export default props => {
     <TopContainer>
       <ProfileContainer>
         <ProfileCard>
-          <TitleName>SYUNSUKE<br />KOBASHI</TitleName>
+          <TitleName>
+            SYUNSUKE<br />KOBASHI
+          </TitleName>
 
           <DescriptionList>
             {[
@@ -57,7 +58,7 @@ export default props => {
                 term: '職業',
                 desc: 'フリーランス',
               },
-            ].map((v,i)=>{
+            ].map((v, i) => {
               return (
                 <FlexWrapper between key={i}>
                   <Term>{v.term}</Term>
@@ -66,7 +67,6 @@ export default props => {
               );
             })}
           </DescriptionList>
-
         </ProfileCard>
 
         <ProfileCard>
@@ -75,22 +75,54 @@ export default props => {
           <DescriptionList>
             {[
               {
-                term: <AnchorStyled href="https://twitter.com/ksyunnnn" target="_blank">Twitter</AnchorStyled>,
-                desc:  <AnchorStyled href="https://twitter.com/ksyunnnn" target="_blank"><i className="fab fa-twitter-square"></i></AnchorStyled>,
+                term: (
+                  <AnchorStyled href="https://twitter.com/ksyunnnn" target="_blank">
+                    Twitter
+                  </AnchorStyled>
+                ),
+                desc: (
+                  <AnchorStyled href="https://twitter.com/ksyunnnn" target="_blank">
+                    <i className="fab fa-twitter-square" />
+                  </AnchorStyled>
+                ),
               },
               {
-                term: <AnchorStyled href="https://www.facebook.com/ksyunnnn" target="_blank">Facebook</AnchorStyled>,
-                desc:  <AnchorStyled href="https://www.facebook.com/ksyunnnn" target="_blank"><i className="fab fa-facebook-square"></i></AnchorStyled>,
+                term: (
+                  <AnchorStyled href="https://www.facebook.com/ksyunnnn" target="_blank">
+                    Facebook
+                  </AnchorStyled>
+                ),
+                desc: (
+                  <AnchorStyled href="https://www.facebook.com/ksyunnnn" target="_blank">
+                    <i className="fab fa-facebook-square" />
+                  </AnchorStyled>
+                ),
               },
               {
-                term: <AnchorStyled href="https://medium.com/syunsukekobashi" target="_blank">Medium</AnchorStyled>,
-                desc:  <AnchorStyled href="https://medium.com/syunsukekobashi" target="_blank"><i className="fab fa-medium"></i></AnchorStyled>,
+                term: (
+                  <AnchorStyled href="https://medium.com/syunsukekobashi" target="_blank">
+                    Medium
+                  </AnchorStyled>
+                ),
+                desc: (
+                  <AnchorStyled href="https://medium.com/syunsukekobashi" target="_blank">
+                    <i className="fab fa-medium" />
+                  </AnchorStyled>
+                ),
               },
               {
-                term: <AnchorStyled href="https://github.com/ksyunnnn" target="_blank">Github</AnchorStyled>,
-                desc:  <AnchorStyled href="https://github.com/ksyunnnn" target="_blank"><i className="fab fa-github-square"></i></AnchorStyled>,
+                term: (
+                  <AnchorStyled href="https://github.com/ksyunnnn" target="_blank">
+                    Github
+                  </AnchorStyled>
+                ),
+                desc: (
+                  <AnchorStyled href="https://github.com/ksyunnnn" target="_blank">
+                    <i className="fab fa-github-square" />
+                  </AnchorStyled>
+                ),
               },
-            ].map((v,i)=>{
+            ].map((v, i) => {
               return (
                 <FlexWrapper between key={i}>
                   <Term>{v.term}</Term>
@@ -99,7 +131,6 @@ export default props => {
               );
             })}
           </DescriptionList>
-
         </ProfileCard>
       </ProfileContainer>
     </TopContainer>

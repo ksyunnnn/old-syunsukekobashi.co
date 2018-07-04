@@ -2,7 +2,7 @@ import styled, { injectGlobal } from 'styled-components';
 import { Colors } from '../variables';
 import { media } from '../helpers/media-query';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 injectGlobal`
 
@@ -36,7 +36,7 @@ export const AnchorStyled = styled.a`
   :hover,
   :active {
     color: inherit;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, 0.5);
   }
 `;
 

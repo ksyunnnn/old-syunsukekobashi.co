@@ -18,7 +18,7 @@ class App extends Component {
     this.setState(prevState => ({
       isToggleMenu: !prevState.isToggleMenu,
     }));
-    console.log("hgo")
+    console.log('hgo');
   };
   render() {
     return (

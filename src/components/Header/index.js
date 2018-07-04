@@ -18,11 +18,18 @@ const MenuItem = styled.div`
 
 const Navigation = props => {
   const { isToggleMenu } = props;
-  let contents = "|||";
+  let contents = '|||';
 
-  if(isToggleMenu) contents = "メニューが開く予定";
+  if (isToggleMenu) contents = 'メニューが開く予定';
 
-  return  <span style={{fontSize: isToggleMenu?'11px':'inherit',cursor: "pointer"}} onClick={()=>props.toggleMenu()}>{contents}</span>;
+  return (
+    <span
+      style={{ fontSize: isToggleMenu ? '11px' : 'inherit', cursor: 'pointer' }}
+      onClick={() => props.toggleMenu()}
+    >
+      {contents}
+    </span>
+  );
 };
 
 const HeaderContainer = styled.div`
