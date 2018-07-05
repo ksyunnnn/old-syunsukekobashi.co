@@ -15,7 +15,15 @@ export default props => {
           {
             term: '名前',
             icon: 'fas fa-glasses',
-            desc: <span>小橋俊介<OnlyPCWrapper>(コバシ シュンスケ)</OnlyPCWrapper><OnlySPWrapper><br/><small>(コバシ シュンスケ)</small></OnlySPWrapper></span>,
+            desc: (
+              <span>
+                小橋俊介<OnlyPCWrapper>(コバシ シュンスケ)</OnlyPCWrapper>
+                <OnlySPWrapper>
+                  <br />
+                  <small>(コバシ シュンスケ)</small>
+                </OnlySPWrapper>
+              </span>
+            ),
           },
           {
             term: '誕生日',
@@ -32,7 +40,9 @@ export default props => {
             <FlexWrapper between key={i}>
               <Term>
                 <OnlyPCWrapper>{v.term}</OnlyPCWrapper>
-                <OnlySPWrapper><i className={v.icon} /></OnlySPWrapper>
+                <OnlySPWrapper>
+                  <i className={v.icon} />
+                </OnlySPWrapper>
               </Term>
               <Description>{v.desc}</Description>
             </FlexWrapper>
@@ -41,4 +51,4 @@ export default props => {
       </DescriptionList>
     </ProfileCard>
   );
-}
+};

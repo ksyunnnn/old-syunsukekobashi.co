@@ -18,7 +18,14 @@ export default props => {
           {
             term: '開発言語',
             icon: 'fas fa-wrench',
-            desc: <span>React<OnlySPWrapper><br/></OnlySPWrapper> / Pug / SCSS</span>,
+            desc: (
+              <span>
+                React<OnlySPWrapper>
+                  <br />
+                </OnlySPWrapper>{' '}
+                / Pug / SCSS
+              </span>
+            ),
           },
           {
             term: 'ツール',
@@ -30,7 +37,9 @@ export default props => {
             <FlexWrapper between key={i}>
               <Term>
                 <OnlyPCWrapper>{v.term}</OnlyPCWrapper>
-                <OnlySPWrapper><i className={v.icon} /></OnlySPWrapper>
+                <OnlySPWrapper>
+                  <i className={v.icon} />
+                </OnlySPWrapper>
               </Term>
               <Description>{v.desc}</Description>
             </FlexWrapper>
@@ -39,4 +48,4 @@ export default props => {
       </DescriptionList>
     </ProfileCard>
   );
-}
+};

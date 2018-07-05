@@ -27,9 +27,7 @@ class App extends Component {
         <MainContainer>
           <Top />
         </MainContainer>
-        <Footer>
-          © 2018 syunsukekobashi.co
-        </Footer>
+        <Footer>© 2018 syunsukekobashi.co</Footer>
       </div>
     );
   }

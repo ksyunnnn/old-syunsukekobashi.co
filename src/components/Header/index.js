@@ -33,12 +33,12 @@ const Navigation = props => {
 };
 
 const HeaderContainer = styled.div`
-  font-size: .8em;
+  font-size: 0.8em;
   z-index: 10;
   position: fixed;
   width: 100%;
   height: 50px;
-  background: rgba(250,250,250,.8);
+  background: rgba(250, 250, 250, 0.8);
   color: ${Colors.black};
   padding: 0 80px;
   box-sizing: border-box;

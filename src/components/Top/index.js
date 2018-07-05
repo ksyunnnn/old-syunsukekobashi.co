@@ -10,7 +10,7 @@ import ProfileMe from './ProfileMe';
 import ProfileWorks from './ProfileWorks';
 import ProfileSocial from './ProfileSocial';
 
-import { Button } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react';
 
 export const ProfileCard = styled.div`
   :not(:last-child) {
@@ -69,7 +69,13 @@ export default props => {
         <ProfileSocial />
       </ProfileContainer>
 
-      <Button onClick={()=>window.open("https://m.me/ksyunnnn")} size='large' style={{fontWeight: 'normal'}}>連絡をとる</Button>
+      <Button
+        onClick={() => window.open('https://m.me/ksyunnnn')}
+        size="large"
+        style={{ fontWeight: 'normal' }}
+      >
+        連絡をとる
+      </Button>
     </TopContainer>
   );
 };

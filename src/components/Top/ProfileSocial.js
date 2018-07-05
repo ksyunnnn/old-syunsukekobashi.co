@@ -69,4 +69,4 @@ export default props => {
       </DescriptionList>
     </ProfileCard>
   );
-}
+};
