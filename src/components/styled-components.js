@@ -41,14 +41,35 @@ export const AnchorStyled = styled.a`
 `;
 
 export const MainContainer = styled.div`
-  padding: 80px 160px;
+  padding: 160px 160px;
   ${media.phone`
     padding: 20vh 16px;
-    background: ${Colors.red};
   `};
 `;
 
 export const FlexWrapper = styled.div`
   display: flex;
   justify-content: ${props => (props.between ? 'space-between' : 'none')};
+`;
+
+export const OnlySPWrapper = styled.div`
+  display: none;
+  ${media.phone`
+    display: inline;
+  `};
+`;
+
+export const OnlyPCWrapper = styled.div`
+  display: inline;
+  ${media.phone`
+    display: none;
+  `};
+`;
+
+export const Footer = styled.footer`
+  line-height: 80px;
+  padding: 0 160px;
+  ${media.phone`
+    padding: 0 16px;
+  `};
 `;

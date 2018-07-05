@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { MainContainer } from './components/styled-components';
+import { MainContainer, Footer } from './components/styled-components';
 
 import Header from './components/Header';
 import Top from './components/Top';
@@ -27,6 +27,9 @@ class App extends Component {
         <MainContainer>
           <Top />
         </MainContainer>
+        <Footer>
+          © 2018 syunsukekobashi.co
+        </Footer>
       </div>
     );
   }

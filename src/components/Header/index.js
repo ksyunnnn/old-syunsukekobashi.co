@@ -33,19 +33,20 @@ const Navigation = props => {
 };
 
 const HeaderContainer = styled.div`
+  font-size: .8em;
   z-index: 10;
   position: fixed;
   width: 100%;
   height: 50px;
-  background: ${Colors.white};
+  background: rgba(250,250,250,.8);
   color: ${Colors.black};
-  padding: 0px 80px;
+  padding: 0 80px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   line-height: 50px;
   ${media.phone`
-    padding: 2vh 16px;
+    padding: 0 16px;
   `};
 `;
 
