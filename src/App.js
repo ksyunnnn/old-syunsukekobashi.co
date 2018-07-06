@@ -12,6 +12,7 @@ class App extends Component {
     this.state = {
       isToggleMenu: false,
       isToggleHands: false,
+      cheerCount: 0,
     };
   }
 
@@ -25,12 +26,37 @@ class App extends Component {
     this.setState({ isToggleHands: !this.state.visible });
     setInterval(this.setState({ isToggleHands: !this.state.visible }), 500);
   };
+
+  fetchCheerCount = () => {
+    const result = 3000;
+    this.setState({ cheerCount: result });
+  };
+
+  pushCheerCount = () => {
+    this.setState(prevState => {
+      let cnt = prevState.cheerCount;
+      cnt++;
+      return {
+        cheerCount: cnt,
+      };
+    });
+  };
+
+  componentDidMount() {
+    this.fetchCheerCount();
+  }
+
   render() {
     return (
       <div className="App">
         <Header isToggleMenu={this.state.isToggleMenu} toggleMenu={this.toggleMenu} />
         <MainContainer>
-          <Top isToggleHands={this.state.isToggleHands} toggleHands={this.toggleHands} />
+          <Top
+            isToggleHands={this.state.isToggleHands}
+            toggleHands={this.toggleHands}
+            cheerCount={this.state.cheerCount}
+            pushCheerCount={this.pushCheerCount}
+          />
         </MainContainer>
         <Footer>© 2018 syunsukekobashi.co</Footer>
       </div>
