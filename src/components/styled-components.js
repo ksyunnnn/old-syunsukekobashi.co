@@ -32,11 +32,11 @@ export const AnchorStyled = styled.a`
   color: inherit;
   text-decoration: none;
   padding: 4px;
-  border-radius: 5px;
+  border-radius: 20%;
   :hover,
   :active {
     color: inherit;
-    background: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid;
   }
 `;
 

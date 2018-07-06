@@ -29,20 +29,17 @@ export const TitleName = styled.div`
   `};
 `;
 
-export const DescriptionList = styled.dl`
+export const DescriptionList = styled.div`
   font-size: 1.8rem;
-  line-height: 2em;
+  line-height: 2.5em;
   letter-spacing: 8px;
 `;
 
-export const Term = styled.dt`
-  margin-right: 80px;
-  ${media.phone`
-    margin-right: 16px;
-  `};
+export const Term = styled.div`
+  min-width: 30%;
 `;
 
-export const Description = styled.dd`
+export const Description = styled.div`
   text-align: right;
   small {
     letter-spacing: 2px;
@@ -56,7 +53,7 @@ const TopContainer = styled.div`
 `;
 
 const ProfileContainer = styled.div`
-  max-width: 940px;
+  max-width: 840px;
   margin-bottom: 160px;
 `;
 
