@@ -5,6 +5,8 @@ import { Colors } from '../../variables';
 import { media } from '../../helpers/media-query';
 
 import { AnchorStyled, FlexWrapper, OnlySPWrapper, OnlyPCWrapper } from '../styled-components';
+import CheerButton from '../Shared/CheerButton';
+import ClapHands from '../Shared/ClapHands';
 
 import ProfileMe from './ProfileMe';
 import ProfileWorks from './ProfileWorks';
@@ -57,9 +59,29 @@ const ProfileContainer = styled.div`
   margin-bottom: 160px;
 `;
 
+const ActionContainer = styled.div`
+  position: fixed;
+  top: 160px;
+  right: 4vw;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  ${media.phone`
+    top: auto;
+    bottom: 0;
+    right: 24px;
+  `};
+`;
+
 export default props => {
   return (
     <TopContainer>
+      <ActionContainer>
+        <CheerButton {...props} />
+        <div>
+          <ClapHands {...props} />
+        </div>
+      </ActionContainer>
+
       <ProfileContainer>
         <ProfileMe />
         <ProfileWorks />

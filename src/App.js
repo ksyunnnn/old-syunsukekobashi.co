@@ -11,6 +11,7 @@ class App extends Component {
 
     this.state = {
       isToggleMenu: false,
+      isToggleHands: false,
     };
   }
 
@@ -18,14 +19,18 @@ class App extends Component {
     this.setState(prevState => ({
       isToggleMenu: !prevState.isToggleMenu,
     }));
-    console.log('hgo');
+  };
+
+  toggleHands = () => {
+    this.setState({ isToggleHands: !this.state.visible });
+    setInterval(this.setState({ isToggleHands: !this.state.visible }), 500);
   };
   render() {
     return (
       <div className="App">
         <Header isToggleMenu={this.state.isToggleMenu} toggleMenu={this.toggleMenu} />
         <MainContainer>
-          <Top />
+          <Top isToggleHands={this.state.isToggleHands} toggleHands={this.toggleHands} />
         </MainContainer>
         <Footer>© 2018 syunsukekobashi.co</Footer>
       </div>
